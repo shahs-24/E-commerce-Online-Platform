@@ -1,0 +1,384 @@
+
+.container {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.header {
+  margin-bottom: 25px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #2d1b4e;
+}
+
+.header p {
+  margin-top: 6px;
+  color: #777;
+  font-size: 14px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eee;
+}
+
+.cardTitle {
+  margin: 0 0 20px;
+  font-size: 20px;
+  color: #3c2463;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.formGroup label {
+  margin-bottom: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.input,
+.textarea,
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 11px 13px;
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.input:focus,
+.textarea:focus,
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: #6f42a5;
+  box-shadow: 0 0 0 3px rgba(111, 66, 165, 0.12);
+}
+
+.textarea,
+.formGroup textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.arrayItem {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.arrayItem .input {
+  flex: 1;
+}
+
+.removeButton {
+  border: none;
+  background: #ffe5e5;
+  color: #d93025;
+  padding: 0 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.removeButton:hover {
+  background: #ffd0d0;
+}
+
+.addButton {
+  border: 1px solid #6f42a5;
+  background: white;
+  color: #6f42a5;
+  padding: 9px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.addButton:hover {
+  background: #6f42a5;
+  color: white;
+}
+
+.lesson {
+  background: #f8f6fb;
+  border: 1px solid #e4dff0;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+}
+
+.lessonHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.lessonHeader h3 {
+  margin: 0;
+  color: #3c2463;
+  font-size: 17px;
+}
+
+.createButton {
+  width: 100%;
+  border: none;
+  background: #6f42a5;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.createButton:hover {
+  background: #593487;
+}
+
+/* =========================
+   UPDATE COURSE
+========================= */
+
+.formPage {
+  min-height: 100vh;
+  background: #f7f7fb;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.formContainer {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.formHeader {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 18px;
+}
+
+.formHeader h1 {
+  margin: 0;
+  color: #2d2147;
+  font-size: 28px;
+}
+
+.formHeader p {
+  color: #777;
+  margin-top: 7px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+  .container {
+    padding: 15px;
+  }
+
+  .formPage {
+    padding: 15px;
+  }
+
+  .formContainer {
+    padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arrayItem {
+    flex-direction: column;
+  }
+
+  .removeButton {
+    padding: 9px;
+  }
+}
+
+.coursePage {
+min-height: 100vh;
+background: #f7f5fb;
+padding: 35px;
+box-sizing: border-box;
+}
+
+/* Header */
+.courseHeader {
+margin-bottom: 30px;
+}
+
+.courseHeader h1 {
+margin: 0;
+font-size: 30px;
+font-weight: 700;
+color: #2d2147;
+}
+
+.courseHeader p {
+margin: 8px 0 0;
+color: #777;
+font-size: 15px;
+}
+
+/* Course Grid */
+.courseGrid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 25px;
+}
+
+/* Course Card */
+.courseCard {
+background: #ffffff;
+border-radius: 14px;
+overflow: hidden;
+border: 1px solid #e8e3f0;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+transition: 0.25s ease;
+}
+
+.courseCard:hover {
+transform: translateY(-5px);
+box-shadow: 0 8px 25px rgba(60, 36, 99, 0.15);
+}
+
+/* Course Image */
+.courseImage {
+width: 100%;
+height: 180px;
+background: #eee;
+overflow: hidden;
+}
+
+.courseImage img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+display: block;
+}
+
+/* Course Information */
+.courseInfo {
+padding: 20px;
+}
+
+.courseInfo h2 {
+margin: 0 0 10px;
+font-size: 20px;
+color: #2d2147;
+font-weight: 700;
+}
+
+.courseInfo p {
+margin: 0 0 18px;
+color: #666;
+font-size: 14px;
+line-height: 1.5;
+min-height: 42px;
+}
+
+/* Price + Level */
+.courseDetails {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 18px;
+}
+
+.courseDetails span:first-child {
+font-size: 18px;
+font-weight: 700;
+color: #6f42a5;
+}
+
+.courseDetails span:last-child {
+background: #eee8f8;
+color: #5c388d;
+padding: 5px 10px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: 600;
+}
+
+/* Edit Button */
+.editButton {
+width: 100%;
+border: none;
+background: #6f42a5;
+color: white;
+padding: 11px 15px;
+border-radius: 7px;
+font-size: 14px;
+font-weight: 600;
+cursor: pointer;
+transition: 0.2s ease;
+}
+
+.editButton:hover {
+background: #593487;
+}
+
+/* Responsive */
+@media (max-width: 1000px) {
+.courseGrid {
+grid-template-columns: repeat(2, 1fr);
+}
+}
+
+@media (max-width: 650px) {
+.coursePage {
+padding: 20px;
+}
+
+.courseGrid {
+grid-template-columns: 1fr;
+}
+
+.courseHeader h1 {
+font-size: 25px;
+}
+}
+
+

@@ -1,0 +1,195 @@
+.profileDashboard {
+  background-color: #fff;
+  width: 100%;
+  margin: 20px auto;
+  min-height: 90vh;
+}
+
+.profileDashboard .container {
+  display: flex;
+  width: 100%;
+}
+
+.container .sidebar {
+  flex-basis: 30%;
+  justify-content: flex-start;
+  padding: 10px;
+  background: #714cb64a;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .content {
+  flex-basis: 70%;
+  padding: 20px;
+}
+
+.sidebar picture {
+  padding: 30px 0;
+}
+.sidebar img {
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  border: 5px solid #714cb6;
+}
+
+.sidebar h1 {
+  text-transform: uppercase;
+  padding: 0;
+  font-weight: 400;
+  text-shadow: 0 0 0 #714cb6;
+  font-size: 18px;
+  color: #714cb6;
+}
+
+.content {
+  padding: 20px;
+}
+.content span {
+  font-weight: 300;
+  color: #999;
+  text-transform: lowercase;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.content div {
+  display: block;
+  padding: 10px 0;
+  margin: 0 10px;
+}
+
+.content div span {
+  padding: 10px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.content div.courses {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px 0;
+}
+
+.courses main {
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+}
+
+.courses main:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(113, 76, 182, 0.2);
+}
+
+.courses h1 {
+  padding: 0 0 15px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #714cb6;
+  text-transform: capitalize;
+}
+
+.courses p {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f7f9;
+  padding: 12px;
+  color: #333;
+  border-radius: 6px;
+  margin: 8px 0;
+}
+
+.courses p span:first-child {
+  color: #777;
+  text-transform: capitalize;
+}
+
+.courses p span:last-child {
+  color: #1b0d6f;
+  font-weight: 500;
+}
+
+.courses span {
+  font-size: 14px;
+}
+
+.sidebar .icon {
+  position: relative;
+  display: block;
+}
+.sidebar .icon svg {
+  position: absolute;
+  right: -26px;
+  color: #714cb6;
+  font-weight: bold;
+  top: 1px;
+}
+
+.updateForm h1 {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 0;
+  /* text-decoration: underline; */
+  border-bottom: 3px solid #eee;
+  margin-bottom: 10px;
+}
+
+.updateForm div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.updateForm label {
+  width: 100%;
+  display: block;
+  padding: 10px 0;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.updateForm input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  background: #fff;
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.updateForm button {
+  background-color: #1b0d6f;
+  width: auto;
+  display: block;
+  padding: 10px 30px;
+  text-align: center;
+  border: 1px solid #1a0595;
+  color: #fff;
+  transition: ease-in-out 0.5s linear;
+  text-transform: capitalize;
+  font-weight: bold;
+  cursor: pointer;
+}
+.updateForm button:hover {
+  background-color: #714cb6;
+  color: #fff;
+}
+
+.profilePic {
+  position: relative;
+}
+
+.profilePic svg {
+    position: absolute;
+    right: 0;
+    font-size: 35px;
+}
