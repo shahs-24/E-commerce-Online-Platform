@@ -18,6 +18,8 @@ import SingleUser from "./components/Admin/SingleUser";
 import CreateCourse from "./components/course/CreateCourse";
 import UpdateCourse from "./components/course/UpdateCourse";
 import UpdateCourseList from "./components/course/UpdateCourseList";
+import CourseList from "./components/course/CourseList";
+import CourseDetails from "./components/course/CourseDetails";
 
 const App = () => {
   return (
@@ -40,6 +42,8 @@ const App = () => {
                 {/* Authenticated Routes */}
 
                 <Route element={<ProtectedRoute />}>
+                  <Route path="/courses" element={<CourseList />} />
+                   <Route path="/courses/:id" element={<CourseDetails />} />
                   <Route path="/user/profile" element={<ProfileDashboard />}>
                     <Route index element={<ProfileIndexPage />} />
                     <Route

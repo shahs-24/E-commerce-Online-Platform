@@ -19,33 +19,38 @@ const CourseList = () => {
 
   return (
     <section className={Styles.coursePage}>
-      <h1>All Courses</h1>
+      <div className={Styles.courseHeader}>
+        <h1>All Courses</h1>
+        <p>Explore our available courses</p>
+      </div>
 
       <div className={Styles.courseGrid}>
         {courses.map((course) => (
-          <Link
-            to={`/courses/${course._id}`}
-            key={course._id}
-            className={Styles.courseLink}
-          >
-            <article className={Styles.courseCard}>
+          <div className={Styles.courseCard} key={course._id}>
+            <div className={Styles.courseImage}>
               <img
                 src={course.thumbnail?.url}
                 alt={course.name}
               />
+            </div>
 
-              <div className={Styles.courseInfo}>
-                <h2>{course.name}</h2>
+            <div className={Styles.courseInfo}>
+              <h2>{course.name}</h2>
 
-                <p>{course.description}</p>
+              <p>{course.description}</p>
 
-                <div className={Styles.courseMeta}>
-                  <span>₹{course.price}</span>
-                  <span>{course.level}</span>
-                </div>
+              <div className={Styles.courseDetails}>
+                <span>₹{course.price}</span>
+                <span>{course.level}</span>
               </div>
-            </article>
-          </Link>
+
+              <Link to={`/courses/${course._id}`}>
+                <button className={Styles.editButton}>
+                  View Course
+                </button>
+              </Link>
+            </div>
+          </div>
         ))}
       </div>
     </section>

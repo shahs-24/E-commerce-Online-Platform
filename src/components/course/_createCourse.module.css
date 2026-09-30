@@ -381,4 +381,122 @@ font-size: 25px;
 }
 }
 
+/* =========================
+   COURSE DETAILS
+========================= */
+
+.detailsPage {
+  min-height: 100vh;
+  background: #f7f5fb;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.detailsContainer {
+  max-width: 1100px;
+  margin: 0 auto 25px;
+  background: white;
+  border-radius: 14px;
+  padding: 30px;
+  display: grid;
+  grid-template-columns: 400px 1fr;
+  gap: 35px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.detailsImage {
+  width: 100%;
+  height: 280px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.detailsImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.detailsInfo h1 {
+  margin: 0 0 15px;
+  font-size: 30px;
+  color: #2d2147;
+}
+
+.detailsDescription {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.detailsPrice {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.detailsPrice span:first-child {
+  font-size: 26px;
+  font-weight: 700;
+  color: #6f42a5;
+}
+
+.detailsPrice span:last-child {
+  color: #777;
+  font-size: 14px;
+}
+
+.detailsLevel,
+.detailsTags {
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.detailsTags span {
+  background: #eee8f8;
+  color: #5c388d;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-left: 8px;
+  font-size: 13px;
+}
+
+.detailsCard {
+  max-width: 1100px;
+  margin: 0 auto 25px;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+}
+
+.detailsCard h2 {
+  margin: 0 0 18px;
+  color: #3c2463;
+  font-size: 21px;
+}
+
+.detailsCard p {
+  color: #555;
+  margin: 10px 0;
+}
+
+/* Responsive */
+
+@media (max-width: 800px) {
+  .detailsPage {
+    padding: 20px;
+  }
+
+  .detailsContainer {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .detailsImage {
+    height: 250px;
+  }
+}
+
 

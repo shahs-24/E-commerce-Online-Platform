@@ -15,6 +15,10 @@ const AuthNav = () => {
   return (
     <>
       <li>
+        <Link to="/courses">Courses</Link>
+      </li>
+
+      <li>
         <Link to="#">Dashboard</Link>
       </li>
       <li>
