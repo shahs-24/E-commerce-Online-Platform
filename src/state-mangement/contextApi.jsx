@@ -15,10 +15,12 @@ import {
 } from "../services/api/adminServices";
 import {
   fetchAllCourses,
+  fetchAllLmsCourses,
   createCourse,
   fetchAllCoursesForAdmin,
   updateCourse,
   getCourseById,
+  deleteCourse,
 } from "../services/api/courseServices";
 
 export const AuthContext = createContext();
@@ -180,6 +182,11 @@ export const AuthProvider = ({ children }) => {
     return data;
   };
 
+  const getAllLmsCoursesApi = async () => {
+  let data = await fetchAllLmsCourses();
+  return data;
+};
+
   const createCourseApi = async (payload) => {
     let data = await createCourse(payload);
     return data;
@@ -200,6 +207,10 @@ const updateCourseApi = async (id, payload) => {
   return data;
 };
 
+const deleteCourseApi = async (id) => {
+  const data = await deleteCourse(id);
+  return data;
+};
   /*------------------ADMIN DATA ENDS HERE ------------------*/
 
   return (
@@ -224,6 +235,8 @@ const updateCourseApi = async (id, payload) => {
           createCourseApi,
           getCourseByIdApi,
           updateCourseApi,
+          deleteCourseApi,
+          getAllLmsCoursesApi,
         }}
       >
         {children}

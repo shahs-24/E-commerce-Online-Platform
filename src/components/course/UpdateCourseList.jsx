@@ -4,7 +4,7 @@ import { useAuth } from "../../hooks/fetchUser";
 import Styles from "./_createCourse.module.css";
 
 const UpdateCourseList = () => {
-  const { getAllCoursesForAdminApi } = useAuth();
+  const { getAllCoursesForAdminApi, deleteCourseApi } = useAuth();
   const [courses, setCourses] = useState([]);
   const navigate = useNavigate();
 
@@ -21,6 +21,28 @@ const UpdateCourseList = () => {
     fetchCourses();
   }, []);
   console.log("COURSES:", courses);
+
+  /*delete course*/
+  const handleDelete = async (id) => {
+    const confirmed = window.confirm(
+      "Are you sure you want to delete this course?",
+    );
+
+    if (!confirmed) return;
+
+    try {
+      await deleteCourseApi(id);
+
+      setCourses((prevCourses) =>
+        prevCourses.filter((course) => course._id !== id),
+      );
+
+      alert("Course deleted successfully");
+    } catch (error) {
+      console.error("Delete course error:", error);
+      alert("Failed to delete course");
+    }
+  };
 
   return (
     <section className={Styles.coursePage}>
@@ -57,6 +79,13 @@ const UpdateCourseList = () => {
                 }
               >
                 Edit Course
+              </button>
+
+              <button
+                className={Styles.deleteButton}
+                onClick={() => handleDelete(course._id)}
+              >
+                Delete Course
               </button>
             </div>
           </article>

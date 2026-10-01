@@ -1,0 +1,42 @@
+.ordersPage {
+  padding: 30px;
+}
+
+.ordersPage h1 {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.ordersContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.orderCard {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: white;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.orderCard h2 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.orderCard p {
+  margin: 8px 0;
+  font-size: 15px;
+}
+
+.status {
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .ordersContainer {
+    grid-template-columns: 1fr;
+  }
+}

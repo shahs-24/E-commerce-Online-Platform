@@ -7,11 +7,7 @@ const AdminSidebar = () => {
 
   return (
     <div className={Styles.sidebarMenu}>
-
-      <NavLink
-        to="/admin/admin-dashboard"
-        className={Styles.sidebarLink}
-      >
+      <NavLink to="/admin/admin-dashboard" className={Styles.sidebarLink}>
         Users
       </NavLink>
 
@@ -26,7 +22,6 @@ const AdminSidebar = () => {
 
       {courseOpen && (
         <div className={Styles.courseMenu}>
-
           <NavLink
             to="/admin/admin-dashboard/course/create"
             className={Styles.courseLink}
@@ -41,9 +36,21 @@ const AdminSidebar = () => {
             Update Course
           </NavLink>
 
+          <NavLink
+            to="/admin/admin-dashboard/orders"
+            className={Styles.sidebarLink}
+          >
+            Orders
+          </NavLink>
+
+          <NavLink
+            to="/admin/admin-dashboard/enrolled-courses"
+            className={Styles.sidebarLink}
+          >
+            Enrolled Courses
+          </NavLink>
         </div>
       )}
-
     </div>
   );
 };
